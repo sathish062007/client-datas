@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Client Dashboard | Hasatz Solutions</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="index.html" class="logo-brand">
+        <img src="images/hasatz-logo.jpg" alt="Hasatz Solutions Logo" class="brand-logo-img">
+        <span class="logo-tag">Portal</span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="requirement.html" class="nav-link">Submit Requirement</a>
+        <a href="dashboard.html" class="nav-link active">Client Dashboard</a>
+      </nav>
+
+      <div class="nav-actions" id="navAuthActions">
+        <!-- Injected by auth.js -->
+      </div>
+
+      <button class="mobile-toggle" aria-label="Toggle Navigation">☰</button>
+    </div>
+  </header>
+
+  <!-- Dashboard Main Content -->
+  <main class="main-content">
+    <div class="container">
+      
+      <!-- Welcome Header -->
+      <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; margin-bottom: 2.5rem;">
+        <div>
+          <h1 style="font-size: 2.2rem;">Client <span class="gradient-text">Dashboard</span></h1>
+          <p class="subtitle">Welcome back, <span id="clientDashboardName" style="color: #fff; font-weight: 700;">Client</span>! Track your website project status.</p>
+        </div>
+
+        <a href="requirement.html" class="btn btn-primary btn-lg">
+          ➕ Submit New Requirement
+        </a>
+      </div>
+
+      <!-- Overview Analytics Cards -->
+      <div class="stats-grid">
+        <div class="glass-card stat-card">
+          <div class="stat-icon">📑</div>
+          <div>
+            <div class="stat-value" id="dashTotalReqs">0</div>
+            <div class="stat-label">Total Requirements</div>
+          </div>
+        </div>
+
+        <div class="glass-card stat-card">
+          <div class="stat-icon" style="background: rgba(59, 130, 246, 0.15); color: #60a5fa; border-color: rgba(59, 130, 246, 0.3);">📥</div>
+          <div>
+            <div class="stat-value" id="dashSubmittedReqs">0</div>
+            <div class="stat-label">Submitted</div>
+          </div>
+        </div>
+
+        <div class="glass-card stat-card">
+          <div class="stat-icon" style="background: rgba(245, 158, 11, 0.15); color: #fbbf24; border-color: rgba(245, 158, 11, 0.3);">🔍</div>
+          <div>
+            <div class="stat-value" id="dashReviewingReqs">0</div>
+            <div class="stat-label">Reviewing</div>
+          </div>
+        </div>
+
+        <div class="glass-card stat-card">
+          <div class="stat-icon" style="background: rgba(139, 92, 246, 0.15); color: #c084fc; border-color: rgba(139, 92, 246, 0.3);">⚙️</div>
+          <div>
+            <div class="stat-value" id="dashInProgressReqs">0</div>
+            <div class="stat-label">In Progress</div>
+          </div>
+        </div>
+
+        <div class="glass-card stat-card">
+          <div class="stat-icon" style="background: rgba(16, 185, 129, 0.15); color: #34d399; border-color: rgba(16, 185, 129, 0.3);">✅</div>
+          <div>
+            <div class="stat-value" id="dashCompletedReqs">0</div>
+            <div class="stat-label">Completed</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recent Requirements Section -->
+      <div style="margin-top: 2rem;">
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.5rem;">
+          <h2 style="font-size: 1.5rem;">Recent Website Requirements</h2>
+          <span style="font-size: 0.85rem; color: var(--text-secondary);">Real-time status updates</span>
+        </div>
+
+        <div id="clientReqGrid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem;">
+          <!-- Rendered dynamically -->
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="logo-brand" style="margin-bottom: 1rem;">
+            <img src="images/hasatz-logo.jpg" alt="Hasatz Solutions Logo" class="brand-logo-img">
+          </div>
+          <p style="color: var(--text-secondary); font-size: 0.9rem;">
+            Building modern, high-performance digital experiences and web platforms for global brands.
+          </p>
+        </div>
+
+        <div>
+          <h4 style="font-size: 1rem; margin-bottom: 1rem;">Quick Navigation</h4>
+          <ul style="display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.9rem;">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="requirement.html">Submit Requirement</a></li>
+            <li><a href="dashboard.html">Client Dashboard</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="font-size: 1rem; margin-bottom: 1rem;">Direct Contact</h4>
+          <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 0.5rem;">
+            📱 WhatsApp Support: <a href="https://wa.me/918838303167" target="_blank" style="color: var(--text-primary); font-weight: 700;">+91 8838303167</a>
+          </p>
+          <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 0.5rem;">
+            📧 Email Support: <a href="mailto:hasatzsolutions@gmail.com" style="color: #059669; font-weight: 700; text-decoration: underline;">hasatzsolutions@gmail.com</a>
+          </p>
+          <p style="color: var(--text-secondary); font-size: 0.9rem;">
+            📸 Instagram: <a href="https://www.instagram.com/hasatz_solutions?igsh=YTJra3RnbTBhNzlj" target="_blank" rel="noopener noreferrer" style="color: #e1306c; font-weight: 700;">@hasatz_solutions</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        &copy; 2026 Hasatz Solutions. All rights reserved. Premium Client Website Requirement Portal.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Requirement Detail Modal -->
+  <div class="modal-overlay" id="clientModal">
+    <div class="modal-container">
+      <div class="modal-header">
+        <h3 style="font-size: 1.2rem; color: white;">Requirement Specification Details</h3>
+        <button class="modal-close" onclick="closeClientModal()">&times;</button>
+      </div>
+      <div class="modal-body" id="clientModalBody">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="js/firebase-init.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/auth.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const user = window.HasatzAuth.getCurrentUser();
+      const nameEl = document.getElementById('clientDashboardName');
+      if (nameEl && user) {
+        nameEl.textContent = user.displayName;
+      }
+
+      renderClientDashboard();
+    });
+
+    function renderClientDashboard() {
+      const reqs = window.HasatzStore.getRequirements();
+
+      // Stats
+      document.getElementById('dashTotalReqs').textContent = reqs.length;
+      document.getElementById('dashSubmittedReqs').textContent = reqs.filter(r => r.status === 'Submitted').length;
+      document.getElementById('dashReviewingReqs').textContent = reqs.filter(r => r.status === 'Reviewing').length;
+      document.getElementById('dashInProgressReqs').textContent = reqs.filter(r => r.status === 'In Progress').length;
+      document.getElementById('dashCompletedReqs').textContent = reqs.filter(r => r.status === 'Completed').length;
+
+      const grid = document.getElementById('clientReqGrid');
+      if (!grid) return;
+
+      if (reqs.length === 0) {
+        grid.innerHTML = `
+          <div class="glass-card" style="grid-column: 1 / -1; text-align: center; padding: 4rem 2rem;">
+            <div style="font-size: 3rem; margin-bottom: 1rem;">📂</div>
+            <h3>No requirements submitted yet</h3>
+            <p style="color: var(--text-secondary); margin: 0.5rem 0 1.5rem;">Start building your dream website with Hasatz Solutions now.</p>
+            <a href="requirement.html" class="btn btn-primary">Submit First Requirement</a>
+          </div>
+        `;
+        return;
+      }
+
+      grid.innerHTML = reqs.map(req => `
+        <div class="glass-card interactive-card" style="display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+              <span class="badge badge-${req.status.toLowerCase().replace(' ', '')}">${req.status}</span>
+              <span style="font-size: 0.8rem; color: var(--text-muted);">${window.formatDate(req.createdAt)}</span>
+            </div>
+
+            <h3 style="font-size: 1.25rem; margin-bottom: 0.25rem; color: var(--text-primary);">${req.projectName}</h3>
+            <div style="font-size: 0.85rem; color: var(--primary); font-weight: 600; margin-bottom: 0.75rem;">
+              ${req.id} • ${req.businessName}
+            </div>
+
+            <p style="color: var(--text-secondary); font-size: 0.9rem; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; margin-bottom: 1rem;">
+              ${req.websiteDescription}
+            </p>
+
+            <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem;">
+              <span class="pill-label" style="padding: 0.2rem 0.6rem; font-size: 0.75rem;">🌐 ${req.websiteType}</span>
+              <span class="pill-label" style="padding: 0.2rem 0.6rem; font-size: 0.75rem;">💰 ${req.budget || 'Flexible'}</span>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 0.5rem; border-top: 1px solid var(--border-color); padding-top: 1rem;">
+            <button class="btn btn-secondary btn-full" onclick="viewReqDetail('${req.id}')" style="font-size: 0.85rem;">
+              View Details
+            </button>
+            <a href="https://wa.me/918838303167?text=${encodeURIComponent('Hello Hasatz Solutions, regarding my requirement ' + req.id)}" 
+               target="_blank" class="btn btn-whatsapp" title="WhatsApp Support" style="padding: 0.5rem 0.85rem;">
+              💬
+            </a>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function viewReqDetail(id) {
+      const req = window.HasatzStore.getRequirementById(id);
+      if (!req) return;
+
+      const body = document.getElementById('clientModalBody');
+      body.innerHTML = `
+        <div style="margin-bottom: 1.25rem;">
+          <span class="badge badge-${req.status.toLowerCase().replace(' ', '')}">${req.status}</span>
+          <h2 style="font-size: 1.5rem; color: var(--text-primary); margin-top: 0.5rem;">${req.projectName}</h2>
+          <div style="font-size: 0.85rem; color: var(--text-muted);">Requirement ID: ${req.id}</div>
+        </div>
+
+        <div class="glass-card" style="padding: 1rem; margin-bottom: 1rem;">
+          <h4 style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0.5rem;">Project Description</h4>
+          <p style="font-size: 0.92rem; white-space: pre-line;">${req.websiteDescription}</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
+          <div class="glass-card" style="padding: 1rem;">
+            <h4 style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0.5rem;">Pages Requested</h4>
+            <p style="font-size: 0.88rem;">${req.pagesRequired.join(', ') || 'Default'}</p>
+          </div>
+          <div class="glass-card" style="padding: 1rem;">
+            <h4 style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0.5rem;">Features Requested</h4>
+            <p style="font-size: 0.88rem;">${req.featuresRequired.join(', ') || 'Standard'}</p>
+          </div>
+        </div>
+
+        <div style="display: flex; justify-content: flex-end; gap: 1rem; margin-top: 1.5rem;">
+          <button class="btn btn-secondary" onclick="closeClientModal()">Close</button>
+        </div>
+      `;
+
+      document.getElementById('clientModal').classList.add('active');
+    }
+
+    function closeClientModal() {
+      document.getElementById('clientModal').classList.remove('active');
+    }
+  </script>
+</body>
+</html>

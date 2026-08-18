@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hasatz Solutions | Client Website Requirement Portal</title>
+  <meta name="description" content="Submit website requirements, track project progress, and build enterprise web solutions with Hasatz Solutions.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="index.html" class="logo-brand">
+        <img src="images/hasatz-logo.jpg" alt="Hasatz Solutions Logo" class="brand-logo-img">
+        <span class="logo-tag">Portal</span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="requirement.html" class="nav-link">Submit Requirement</a>
+        <a href="dashboard.html" class="nav-link">Client Dashboard</a>
+      </nav>
+
+      <div class="nav-actions" id="navAuthActions">
+        <!-- Dynamically injected by auth.js -->
+        <a href="login.html" class="btn btn-secondary">Sign In</a>
+        <a href="requirement.html" class="btn btn-primary">Submit Spec</a>
+      </div>
+
+      <button class="mobile-toggle" aria-label="Toggle Navigation">☰</button>
+    </div>
+  </header>
+
+  <!-- Main Hero Section -->
+  <main class="main-content">
+    <section class="hero-section" style="padding: 4rem 0; text-align: center;">
+      <div class="container">
+        <div style="max-width: 840px; margin: 0 auto;">
+          <span style="display: inline-block; padding: 0.4rem 1.2rem; background: rgba(16, 185, 129, 0.12); border: 1px solid rgba(16, 185, 129, 0.3); color: #047857; border-radius: var(--radius-full); font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 1.5rem;">
+            🚀 Welcome to Hasatz Solutions Client Portal
+          </span>
+          <h1 style="font-size: clamp(2.4rem, 5vw, 3.8rem); line-height: 1.15; margin-bottom: 1.25rem;">
+            Turn Your Vision Into a <span class="gradient-text">World-Class Web Solution</span>
+          </h1>
+          <p class="subtitle" style="font-size: 1.25rem; max-width: 700px; margin: 0 auto 2.5rem;">
+            Fill out your website project requirements in minutes, receive detailed scope & timeline estimates, and collaborate directly with Hasatz Solutions.
+          </p>
+
+          <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+            <a href="requirement.html" class="btn btn-primary btn-lg">
+              ✨ Start New Project Form
+            </a>
+            <a href="dashboard.html" class="btn btn-secondary btn-lg">
+              📊 Track My Requirements
+            </a>
+          </div>
+        </div>
+
+        <!-- Workflow Grid -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 5rem; text-align: left;">
+          
+          <div class="glass-card interactive-card">
+            <div style="font-size: 2.2rem; margin-bottom: 1rem;">📝</div>
+            <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem;">1. Submit Requirements</h3>
+            <p style="color: var(--text-secondary); font-size: 0.95rem;">
+              Use our guided multi-step form to choose pages, target audience, budget, and design aesthetics.
+            </p>
+          </div>
+
+          <div class="glass-card interactive-card">
+            <div style="font-size: 2.2rem; margin-bottom: 1rem;">⚡</div>
+            <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem;">2. Instant WhatsApp Notify</h3>
+            <p style="color: var(--text-secondary); font-size: 0.95rem;">
+              Generated specs are sent directly to our team via WhatsApp (+91 8838303167) for immediate review.
+            </p>
+          </div>
+
+          <div class="glass-card interactive-card">
+            <div style="font-size: 2.2rem; margin-bottom: 1rem;">🎯</div>
+            <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem;">3. Proposal & Build</h3>
+            <p style="color: var(--text-secondary); font-size: 0.95rem;">
+              Our senior architects review your project scope, provide fixed pricing, and launch development.
+            </p>
+          </div>
+
+          <div class="glass-card interactive-card">
+            <div style="font-size: 2.2rem; margin-bottom: 1rem;">📱</div>
+            <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem;">4. Live Dashboard Track</h3>
+            <p style="color: var(--text-secondary); font-size: 0.95rem;">
+              Track real-time status updates (Submitted, Reviewing, In Progress, Completed) anytime in your dashboard.
+            </p>
+          </div>
+
+        </div>
+
+        <!-- Solutions Showcase -->
+        <div style="margin-top: 6rem; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 3rem 2rem;">
+          <h2 style="font-size: 2rem; margin-bottom: 1rem;">Web Solutions Tailored For Your Growth</h2>
+          <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto 2.5rem;">
+            From corporate business sites to custom e-commerce applications and high-converting landing pages.
+          </p>
+
+          <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;">
+            <span class="pill-label">🏢 Business Sites</span>
+            <span class="pill-label">🛍️ E-commerce Stores</span>
+            <span class="pill-label">💼 Portfolios</span>
+            <span class="pill-label">🚀 High-Converting Landing Pages</span>
+            <span class="pill-label">🎓 Educational Portals</span>
+            <span class="pill-label">🤖 AI-Integrated Web Applications</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="logo-brand" style="margin-bottom: 1rem;">
+            <img src="images/hasatz-logo.jpg" alt="Hasatz Solutions Logo" class="brand-logo-img">
+          </div>
+          <p style="color: var(--text-secondary); font-size: 0.9rem;">
+            Building modern, high-performance digital experiences and web platforms for global brands.
+          </p>
+        </div>
+
+        <div>
+          <h4 style="font-size: 1rem; margin-bottom: 1rem;">Quick Navigation</h4>
+          <ul style="display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.9rem;">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="requirement.html">Submit Requirement</a></li>
+            <li><a href="dashboard.html">Client Dashboard</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="font-size: 1rem; margin-bottom: 1rem;">Direct Contact</h4>
+          <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 0.5rem;">
+            📱 WhatsApp Support: <a href="https://wa.me/918838303167" target="_blank" style="color: var(--text-primary); font-weight: 700;">+91 8838303167</a>
+          </p>
+          <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 0.5rem;">
+            📧 Email Support: <a href="mailto:hasatzsolutions@gmail.com" style="color: #059669; font-weight: 700; text-decoration: underline;">hasatzsolutions@gmail.com</a>
+          </p>
+          <p style="color: var(--text-secondary); font-size: 0.9rem;">
+            📸 Instagram: <a href="https://www.instagram.com/hasatz_solutions?igsh=YTJra3RnbTBhNzlj" target="_blank" rel="noopener noreferrer" style="color: #e1306c; font-weight: 700;">@hasatz_solutions</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        &copy; 2026 Hasatz Solutions. All rights reserved. Premium Client Website Requirement Portal.
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="js/firebase-init.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Submit Website Requirement | Hasatz Solutions</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Header Navigation -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="index.html" class="logo-brand">
+        <img src="images/hasatz-logo.jpg" alt="Hasatz Solutions Logo" class="brand-logo-img">
+        <span class="logo-tag">Portal</span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="requirement.html" class="nav-link active">Submit Requirement</a>
+        <a href="dashboard.html" class="nav-link">Client Dashboard</a>
+      </nav>
+
+      <div class="nav-actions" id="navAuthActions">
+        <!-- Injected by auth.js -->
+      </div>
+
+      <button class="mobile-toggle" aria-label="Toggle Navigation">☰</button>
+    </div>
+  </header>
+
+  <!-- Requirement Form Container -->
+  <main class="main-content">
+    <div class="container" style="max-width: 920px;">
+      
+      <div style="text-align: center; margin-bottom: 3rem;">
+        <span style="display: inline-block; padding: 0.35rem 1rem; background: rgba(99, 102, 241, 0.15); border: 1px solid rgba(99, 102, 241, 0.3); color: #a5b4fc; border-radius: var(--radius-full); font-size: 0.82rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.75rem;">
+          🚀 Interactive Requirement Builder
+        </span>
+        <h1 style="font-size: clamp(2rem, 4vw, 2.8rem);">Client <span class="gradient-text">Website Specification</span></h1>
+        <p class="subtitle">Provide your business project requirements below for a customized Hasatz Solutions proposal.</p>
+      </div>
+
+      <div class="glass-card" style="box-shadow: var(--shadow-lg);">
+        
+        <!-- Multi-Step Wizard Indicator -->
+        <div class="wizard-steps">
+          <div class="wizard-step active" data-step="1">
+            <div class="step-number">1</div>
+            <div class="step-label">Client Info</div>
+          </div>
+          <div class="wizard-step" data-step="2">
+            <div class="step-number">2</div>
+            <div class="step-label">Website Details</div>
+          </div>
+          <div class="wizard-step" data-step="3">
+            <div class="step-number">3</div>
+            <div class="step-label">Pages & Features</div>
+          </div>
+          <div class="wizard-step" data-step="4">
+            <div class="step-number">4</div>
+            <div class="step-label">Design & Budget</div>
+          </div>
+          <div class="wizard-step" data-step="5">
+            <div class="step-number">5</div>
+            <div class="step-label">Files & Submit</div>
+          </div>
+        </div>
+
+        <form id="requirementForm">
+
+          <!-- STEP 1: CLIENT DETAILS -->
+          <div class="form-step-content active" id="step-1">
+            <h3 style="font-size: 1.3rem; margin-bottom: 1.5rem; color: var(--text-primary);">👤 Step 1: Client Details</h3>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="clientName">Full Name <span class="required">*</span></label>
+                <input type="text" id="clientName" class="form-control" placeholder="e.g. Rahul Sharma" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="clientEmail">Email Address <span class="required">*</span></label>
+                <input type="email" id="clientEmail" class="form-control" placeholder="e.g. rahul@company.com" required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="clientPhone">WhatsApp Number <span class="required">*</span></label>
+                <input type="tel" id="clientPhone" class="form-control" placeholder="e.g. +91 8838303167" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="businessName">Business / Brand Name <span class="required">*</span></label>
+                <input type="text" id="businessName" class="form-control" placeholder="e.g. Sharma Tech Solutions" required>
+              </div>
+            </div>
+
+            <div style="display: flex; justify-content: flex-end; margin-top: 2rem;">
+              <button type="button" class="btn btn-primary btn-next-step">
+                Next: Website Details ➔
+              </button>
+            </div>
+          </div>
+
+          <!-- STEP 2: WEBSITE DETAILS -->
+          <div class="form-step-content" id="step-2">
+            <h3 style="font-size: 1.3rem; margin-bottom: 1.5rem; color: var(--text-primary);">🌐 Step 2: Website Overview</h3>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="websiteType">Website Type <span class="required">*</span></label>
+                <select id="websiteType" class="form-control" required>
+                  <option value="Business">Business</option>
+                  <option value="Portfolio">Portfolio</option>
+                  <option value="E-commerce">E-commerce</option>
+                  <option value="Personal">Personal</option>
+                  <option value="Educational">Educational</option>
+                  <option value="Landing Page">Landing Page</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="projectName">Project Name <span class="required">*</span></label>
+                <input type="text" id="projectName" class="form-control" placeholder="e.g. Enterprise Corporate Website" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="targetAudience">Target Audience</label>
+              <input type="text" id="targetAudience" class="form-control" placeholder="e.g. B2B Corporate Clients, Global Retail Customers">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="websiteDescription">Website Description & Objectives <span class="required">*</span></label>
+              <textarea id="websiteDescription" class="form-control" placeholder="Describe the purpose of your website, key goals, functionality needed, and any specific ideas..." required></textarea>
+            </div>
+
+            <div style="display: flex; justify-content: space-between; margin-top: 2rem;">
+              <button type="button" class="btn btn-secondary btn-prev-step">⬅ Back</button>
+              <button type="button" class="btn btn-primary btn-next-step">Next: Pages & Features ➔</button>
+            </div>
+          </div>
+
+          <!-- STEP 3: PAGES & FEATURES -->
+          <div class="form-step-content" id="step-3">
+            <h3 style="font-size: 1.3rem; margin-bottom: 1.5rem; color: var(--text-primary);">⚙️ Step 3: Pages & Features Required</h3>
+
+            <!-- Pages Required -->
+            <div class="form-group">
+              <label class="form-label">Pages Required (Select all that apply)</label>
+              <div class="pill-grid">
+                <div class="pill-item">
+                  <input type="checkbox" id="page-home" name="pages" value="Home" checked>
+                  <label for="page-home" class="pill-label">🏠 Home</label>
+                </div>
+                <div class="pill-item">
+                  <input type="checkbox" id="page-about" name="pages" value="About" checked>
+                  <label for="page-about" class="pill-label">ℹ️ About</label>
+                </div>
+                <div class="pill-item">
+                  <input type="checkbox" id="page-services" name="pages" value="Services" checked>
+                  <label for="page-services" class="pill-label">💼 Services</label>
+                </div>
+                <div class="pill-item">
+                  <input type="checkbox" id="page-products" name="pages" value="Products">
+                  <label for="page-products" class="pill-label">🛍️ Products</label>
+                </div>
+                <div class="pill-item">
+                  <input type="checkbox" id="page-contact" name="pages" value="Contact" checked>
+                  <label for="page-contact" class="pill-label">📞 Contact</label>
+                </div>
+                <div class="pill-item">
+                  <input type="checkbox" id="page-gallery" name="pages" value="Gallery">
+                  <label for="page-gallery" class="pill-label">🖼️ Gallery</label>
+                </div>
+                <div class="pill-item">
+                  <input type="checkbox" id="page-blog" name="pages" value="Blog">
+                  <label for="page-blog" class="pill-label">📰 Blog</label>
+                </div>
+                <div class="pill-item">
+                  <input type="checkbox" id="page-login" name="pages" value="Login">
+                  <label for="page-login" class="pill-label">🔐 Login</label>
+                </div>
+                <div class="pill-item">
+                  <input type="checkbox" id="page-admin" name="pages" value="Admin Panel">
+                  <label for="page-admin" class="pill-label">⚙️ Admin Panel</label>
+                </div>
+                <div class="pill-item">
+                  <input type="checkbox" id="page-other" name="pages" value="Other">
+                  <label for="page-other" class="pill-label">✨ Other</label>
+                </div>
+              </div>
+            </div>
+
+            <!-- Features Required -->
+            <div class="form-group" style="margin-top: 2rem;">
+              <label class="form-label">Features Required (Select all that apply)</label>
+              <div class="pill-grid">
+                <div class="pill-item">
+                  <input type="checkbox" id="feat-whatsapp" name="features" value="WhatsApp" checked>
+                  <label for="feat-whatsapp" class="pill-label">💬 WhatsApp</label>
+                </div>
+                <div class="pill-item">
+                  <input type="checkbox" id="feat-payment" name="features" value="Payment">
+                  <label for="feat-payment" class="pill-label">💳 Payment Gateway</label>
+                </div>
+                <div class="pill-item">
+                  <input type="checkbox" id="feat-maps" name="features" value="Google Maps">
+                  <label for="feat-maps" class="pill-label">📍 Google Maps</label>
+                </div>
+                <div class="pill-item">
+                  <input type="checkbox" id="feat-booking" name="features" value="Booking">
+                  <label for="feat-booking" class="pill-label">📅 Booking System</label>
+                </div>
+                <div class="pill-item">
+                  <input type="checkbox" id="feat-form" name="features" value="Contact Form" checked>
+                  <label for="feat-form" class="pill-label">✉️ Contact Form</label>
+                </div>
+                <div class="pill-item">
+                  <input type="checkbox" id="feat-login" name="features" value="Login System">
+                  <label for="feat-login" class="pill-label">🔑 Login System</label>
+                </div>
+                <div class="pill-item">
+                  <input type="checkbox" id="feat-db" name="features" value="Database">
+                  <label for="feat-db" class="pill-label">🗄️ Database</label>
+                </div>
+                <div class="pill-item">
+                  <input type="checkbox" id="feat-ai" name="features" value="AI Features">
+                  <label for="feat-ai" class="pill-label">🤖 AI Features</label>
+                </div>
+                <div class="pill-item">
+                  <input type="checkbox" id="feat-other" name="features" value="Other">
+                  <label for="feat-other" class="pill-label">⚡ Other</label>
+                </div>
+              </div>
+            </div>
+
+            <div style="display: flex; justify-content: space-between; margin-top: 2rem;">
+              <button type="button" class="btn btn-secondary btn-prev-step">⬅ Back</button>
+              <button type="button" class="btn btn-primary btn-next-step">Next: Design & Budget ➔</button>
+            </div>
+          </div>
+
+          <!-- STEP 4: DESIGN & PROJECT SPECS -->
+          <div class="form-step-content" id="step-4">
+            <h3 style="font-size: 1.3rem; margin-bottom: 1.5rem; color: var(--text-primary);">🎨 Step 4: Design Aesthetics & Budget</h3>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="preferredColor">Preferred Brand Colour</label>
+                <div style="display: flex; gap: 0.75rem; align-items: center;">
+                  <input type="color" id="preferredColor" class="form-control" value="#6366f1" style="width: 60px; padding: 0.2rem; height: 46px; cursor: pointer;">
+                  <span style="font-size: 0.9rem; color: var(--text-secondary);">Select main accent color</span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="websiteStyle">Website Style</label>
+                <select id="websiteStyle" class="form-control">
+                  <option value="Modern Tech & Dark Glass">Modern Tech & Dark Glass</option>
+                  <option value="Minimalist & Clean">Minimalist & Clean</option>
+                  <option value="Luxury & Elegant">Luxury & Elegant</option>
+                  <option value="Vibrant & Creative">Vibrant & Creative</option>
+                  <option value="Corporate & Professional">Corporate & Professional</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="referenceUrl">Reference Website URL (Inspiration)</label>
+              <input type="url" id="referenceUrl" class="form-control" placeholder="https://example.com">
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="budget">Estimated Budget</label>
+                <select id="budget" class="form-control">
+                  <option value="₹500 - ₹5,000">₹500 - ₹5,000</option>
+                  <option value="₹5,000 - ₹15,000">₹5,000 - ₹15,000</option>
+                  <option value="₹15,000 - ₹30,000" selected>₹15,000 - ₹30,000</option>
+                  <option value="₹30,000 - ₹50,000">₹30,000 - ₹50,000</option>
+                  <option value="₹50,000 - ₹1,00,000">₹50,000 - ₹1,00,000</option>
+                  <option value="₹1,00,000+">₹1,00,000+</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="completionDate">Expected Completion Date</label>
+                <input type="date" id="completionDate" class="form-control">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="additionalRequirements">Additional Instructions or Special Features</label>
+              <textarea id="additionalRequirements" class="form-control" placeholder="Mention any extra integrations, domain names, hosting preferences, or specific requests..."></textarea>
+            </div>
+
+            <div style="display: flex; justify-content: space-between; margin-top: 2rem;">
+              <button type="button" class="btn btn-secondary btn-prev-step">⬅ Back</button>
+              <button type="button" class="btn btn-primary btn-next-step">Next: Attachments ➔</button>
+            </div>
+          </div>
+
+          <!-- STEP 5: FILE UPLOAD & SUBMIT -->
+          <div class="form-step-content" id="step-5">
+            <h3 style="font-size: 1.3rem; margin-bottom: 1.5rem; color: var(--text-primary);">📁 Step 5: Upload Logo, Images & Documents</h3>
+
+            <div class="form-group">
+              <label class="form-label">Upload Assets (Logo, Design References, Documents)</label>
+              
+              <div class="file-dropzone" id="fileDropzone">
+                <div class="dropzone-icon">☁️</div>
+                <h4 style="font-size: 1.1rem; color: var(--text-primary); margin-bottom: 0.25rem;">Click or Drag & Drop Files Here</h4>
+                <p style="color: var(--text-muted); font-size: 0.88rem;">Select brand assets, logos, PDF briefs, or image files</p>
+                <input type="file" id="fileInput" multiple hidden accept="image/*,.pdf,.doc,.docx,.xlsx">
+              </div>
+
+              <div class="file-list" id="fileList">
+                <!-- Selected file list will appear here before submission -->
+              </div>
+            </div>
+
+            <div style="margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid var(--border-color);">
+              <button type="submit" id="submitRequirementBtn" class="btn btn-primary btn-full btn-lg" style="font-size: 1.2rem; padding: 1.25rem; text-transform: uppercase; letter-spacing: 0.05em; box-shadow: var(--shadow-glow);">
+                🚀 SUBMIT REQUIREMENT
+              </button>
+            </div>
+
+            <div style="display: flex; justify-content: flex-start; margin-top: 1rem;">
+              <button type="button" class="btn btn-secondary btn-prev-step">⬅ Back</button>
+            </div>
+
+          </div>
+
+        </form>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="logo-brand" style="margin-bottom: 1rem;">
+            <img src="images/hasatz-logo.jpg" alt="Hasatz Solutions Logo" class="brand-logo-img">
+          </div>
+          <p style="color: var(--text-secondary); font-size: 0.9rem;">
+            Building modern, high-performance digital experiences and web platforms for global brands.
+          </p>
+        </div>
+
+        <div>
+          <h4 style="font-size: 1rem; margin-bottom: 1rem;">Quick Navigation</h4>
+          <ul style="display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.9rem;">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="requirement.html">Submit Requirement</a></li>
+            <li><a href="dashboard.html">Client Dashboard</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="font-size: 1rem; margin-bottom: 1rem;">Direct Contact</h4>
+          <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 0.5rem;">
+            📱 WhatsApp Support: <a href="https://wa.me/918838303167" target="_blank" style="color: var(--text-primary); font-weight: 700;">+91 8838303167</a>
+          </p>
+          <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 0.5rem;">
+            📧 Email Support: <a href="mailto:hasatzsolutions@gmail.com" style="color: #059669; font-weight: 700; text-decoration: underline;">hasatzsolutions@gmail.com</a>
+          </p>
+          <p style="color: var(--text-secondary); font-size: 0.9rem;">
+            📸 Instagram: <a href="https://www.instagram.com/hasatz_solutions?igsh=YTJra3RnbTBhNzlj" target="_blank" rel="noopener noreferrer" style="color: #e1306c; font-weight: 700;">@hasatz_solutions</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        &copy; 2026 Hasatz Solutions. All rights reserved. Premium Client Website Requirement Portal.
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="js/firebase-init.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/requirement.js"></script>
+</body>
+</html>
